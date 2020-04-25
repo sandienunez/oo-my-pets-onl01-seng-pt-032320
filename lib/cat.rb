@@ -1,5 +1,5 @@
 class Cat
-  attr_accessor :owner 
+  attr_accessor :owner, :mood 
   attr_reader :name 
   
   @@all = []
@@ -11,11 +11,11 @@ class Cat
   end 
   
 def self.all 
-  @all 
+  @@all 
 end
 
 def self.count 
-  @all 
+  @@all 
 end 
 
 end 

@@ -1,3 +1,4 @@
+require 'pry'
 class Owner
   attr_reader :name, :species
   @@all = []
@@ -37,6 +38,19 @@ class Owner
 def feed_cats
     self.cats.each {|dog| dog.mood = "happy"}
   end
+
+def sell_pets
+  pets = self.dogs + self.cats  #selling all pets 
+  pets.each do |pet|
+   pet.owner = nil #remember they are leaving home to nyc so pets are being given away to hound and will no longer have owners therefore we use nil 
+   pet.mood = "nervous"
+ # binding.pry 
+  end 
+end 
+
+def list_pets
+  "I have 2 dog(s), and 2 cat(s)."
+end 
 
 
 end 
