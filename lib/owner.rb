@@ -42,7 +42,7 @@ def feed_cats
 def sell_pets
   pets = self.dogs + self.cats  #selling all pets 
   pets.each do |pet|
-   pet.owner = nil #remember they are leaving home to nyc so pets are being given away to hound and will no longer have owners therefore we use nil 
+   pet.owner = nil #remember owners are leaving home to nyc so pets are being given away to adoption/hound and will no longer have owners therefore we use nil 
    pet.mood = "nervous"
  # binding.pry 
   end 
